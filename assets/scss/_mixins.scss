@@ -1,0 +1,21 @@
+// Mixins
+@mixin font($name, $type) {
+  @font-face {
+    font-family: $name;
+    src: url(../fonts/#{$name}.#{$type});
+  }
+}
+
+// Footer Social Icons Hover
+@mixin fsi-hover($icon) {
+  &.#{$icon} {
+    background: url(../icons/footer/social/#{$icon}.png) no-repeat center;
+    background-size: 100% 100%;
+    transition: 0.3s;
+    &:hover {
+      background: url(../icons/footer/social-white/#{$icon}.png) no-repeat
+        center;
+      background-size: 100% 100%;
+    }
+  }
+}

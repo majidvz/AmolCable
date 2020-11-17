@@ -1,0 +1,67 @@
+// General Header
+.g-header {
+  top: -1px;
+  height: 60px;
+  background-image: linear-gradient(to top, #01041510, #07081510);
+  transition: 0.3s;
+
+  // Items
+  .nav-item {
+    &::after {
+      transition: 0.3s;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 0;
+      height: 2.5px;
+      border-radius: 1.25px;
+      background: $danger;
+    }
+  }
+
+  .lang {
+    .l-btn {
+      position: relative;
+      padding-left: 30px !important;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 22px;
+        background-size: 100%;
+      }
+
+      &.persian::after {
+        background: url(../icons/iran.svg) no-repeat center;
+      }
+
+      &.english::after {
+        background: url(../icons/uk.svg) no-repeat center;
+      }
+    }
+  }
+
+  // Links
+  .nav-link {
+    line-height: 60px;
+    color: #fff;
+    transition: 0.3s;
+    font-size: 14px;
+  }
+
+  // When Page Scrolled
+  &.scrolled {
+    background: #fff;
+    box-shadow: 0 9px 30px #c6ccd166;
+  }
+
+  // Customers System Button
+  .cs-btn {
+    height: 40px !important;
+    line-height: 40px;
+    margin-top: 10px;
+  }
+}

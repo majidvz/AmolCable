@@ -1,0 +1,169 @@
+@media only screen and (max-width: 991.99px) {
+  // Header
+  .g-header {
+    padding: 0 20px;
+
+    // Logo
+    .logo {
+      transform: skew(0, 5deg) translateY(calc(-50% + 20px));
+    }
+
+    // Menu
+    .menu-links {
+      width: 60vw;
+      padding: 10px;
+      height: 100vh;
+      overflow-y: auto;
+      background: $danger;
+      position: fixed;
+      box-shadow: -10px 0 30px #00000020;
+      top: 0;
+      transition: 0.6s;
+      z-index: 1300 !important;
+
+      // Links
+      .nav-links {
+        color: #7b7b7b !important;
+      }
+    }
+
+    // Menu Button
+    .menu-btn {
+      width: 40px;
+      height: 40px;
+      font-size: 2em;
+      line-height: 40px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    // When Scrolling
+    &.scrolled {
+      // Menu Button
+      .menu-btn {
+        color: #7b7b7b;
+      }
+    }
+
+    .dropdown-menu {
+      transition: 0.3s;
+      height: 0 !important;
+      overflow: hidden;
+      opacity: 0;
+      position: inherit !important;
+      transform: inherit !important;
+      float: inherit !important;
+      visibility: hidden;
+
+      &.show {
+        visibility: visible;
+        height: auto !important;
+        overflow: inherit;
+        opacity: 1;
+      }
+    }
+  }
+
+  // Global Intro
+  .g-intro {
+    // Content
+    .content {
+      text-align: center;
+      width: 80%;
+    }
+
+    &:not(.index-intro) + .content-starter {
+      padding-right: 30px;
+      padding-left: 30px;
+      margin-top: -500px;
+    }
+  }
+
+  // Index
+  .index {
+    // Products Category and About Company
+    .pc-ac-main {
+      // Products Category
+      .owl-stage {
+        padding-top: 25%;
+      }
+    }
+
+    // Products
+    .products {
+      .p-item {
+        margin-bottom: 20px;
+      }
+    }
+
+    // Laboratory
+    .laboratory {
+      // Header
+      header {
+        width: 80%;
+      }
+
+      // Lamp
+      .lamp {
+        height: 350px;
+        animation: turns 3s infinite alternate;
+      }
+    }
+
+    // Blog
+    .blog {
+      .right {
+        width: 100%;
+        .nav-item {
+          font-size: 13.2px;
+        }
+      }
+    }
+  }
+
+  // Footer
+  .g-footer {
+    // Links
+    .links {
+      .holder > .links-item {
+        display: block;
+        float: right;
+        width: 50%;
+      }
+    }
+  }
+
+  // About Page
+  body.about {
+    // Big Text
+    .big-text {
+      font-size: 1.5em;
+    }
+  }
+
+  // Catalog
+  .catalogs {
+    // Files
+    .files {
+      .title {
+        min-height: 47px;
+        background-size: 46px 47px !important;
+      }
+    }
+  }
+
+  body.news-single {
+    .sharing {
+      .sh-item {
+        height: 15px !important;
+        background-size: auto 100% !important;
+      }
+    }
+  }
+
+  body.news {
+    .side-bar {
+      padding: 0;
+    }
+  }
+}

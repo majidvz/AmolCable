@@ -1,0 +1,235 @@
+@media only screen and (min-width: 992px) {
+  // Global Header
+  .g-header {
+    // Logo
+    .logo {
+      left: 50%;
+      transform: skew(0, 5deg) translate(-50%, calc(-50% + 20px));
+    }
+
+    .dropdown {
+      position: relative;
+    }
+    // Dropdown
+    .dropdown-menu {
+      background: #ffffff95;
+      backdrop-filter: blur(5px);
+      transition: 1s;
+      opacity: 0;
+      transform: translate3d(0, 70px, 0px) !important;
+      top: 10px;
+      display: block !important;
+      visibility: hidden;
+      a.btn {
+        padding: 0;
+      }
+      &.show {
+        visibility: visible;
+        top: 0;
+        transform: translate3d(0, 60px, 0px) !important;
+        opacity: 1;
+      }
+    }
+
+    .menu-links {
+      height: 100%;
+    }
+
+    ul {
+      height: 100%;
+    }
+    // Items
+    .nav-item {
+      height: 100%;
+      &:hover {
+        .nav-link {
+          color: $danger !important;
+        }
+        &::after {
+          width: 50px;
+        }
+      }
+    }
+
+    // When Page Scrolled
+    &.scrolled {
+      .nav-link {
+        color: #7b7b7b;
+      }
+    }
+  }
+
+  // Global Intro
+  .g-intro {
+    // Content
+    .content {
+      width: 50%;
+    }
+
+    &:not(.index-intro) + .content-starter {
+      margin-top: -350px;
+    }
+  }
+
+  // Index
+  .index {
+    // Products
+    .products {
+      .p-item {
+        &:nth-child(even) {
+          padding-right: 0;
+          padding-left: 0;
+        }
+
+        &:nth-child(3),
+        &:nth-child(4) {
+          margin-top: 15px !important;
+        }
+
+        &.product-5 {
+          height: 415px;
+        }
+      }
+    }
+
+    // Products Category and About Company
+    .pc-ac-main {
+      // Products Category
+      .p-category {
+        .h-text {
+          width: 75%;
+        }
+        .c-item:hover {
+          background: $gold;
+        }
+      }
+
+      // Products Category
+      .owl-stage {
+        padding-top: 30px;
+      }
+    }
+
+    // Laboratory
+    .laboratory {
+      // Header
+      header {
+        width: 50%;
+      }
+
+      // Lamp
+      .lamp {
+        transform: translateY(100px);
+        background: url(../img/lamp-off.png) no-repeat center bottom;
+        background-size: auto 100%;
+        transition: 0.3s;
+        &:hover {
+          background: url(../img/lamp-on.png) no-repeat center bottom;
+          background-size: auto calc(100% + 7px);
+        }
+      }
+    }
+
+    // Blog
+    .blog {
+      & > header {
+        .right {
+          width: calc(100% - 100px);
+        }
+      }
+    }
+  }
+
+  // Footer
+  .g-footer {
+    // Links
+    .links {
+      display: flex;
+      justify-content: center;
+
+      .links-item:hover {
+        color: #e4322b;
+      }
+
+      .holder {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    // Outro
+    .outro {
+      color: #6c6f77;
+
+      .s-icon {
+        width: 30px;
+        height: 30px;
+        @include fsi-hover(facebook);
+        @include fsi-hover(twitter);
+        @include fsi-hover(instagram);
+        @include fsi-hover(linkedin);
+        @include fsi-hover(telegram);
+      }
+    }
+  }
+
+  // Blog Card
+  .b-card {
+    .card-body {
+      &:hover {
+        background: $danger !important;
+        color: #fff !important;
+        box-shadow: 0px 11px 31px 0 rgba(238, 33, 37, 0.17);
+        hr {
+          background: #fff !important;
+        }
+
+        .date,
+        .more {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  // About Page
+  body.about {
+    // Big Text
+    .big-text {
+      font-size: 2em;
+    }
+
+    // Slogan
+    .slogan {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 1px;
+        border-radius: 0.5px;
+        background: #cdcdcd;
+        top: 0;
+      }
+    }
+  }
+
+  // Catalog
+  .catalogs {
+    // Files
+    .files {
+      .title {
+        height: 40px;
+        line-height: 40px;
+        background-size: auto 100% !important;
+      }
+    }
+  }
+
+  // Login / Register / Forget Password
+  body.login {
+    .content-box {
+      width: 50%;
+    }
+  }
+}

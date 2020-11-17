@@ -1,0 +1,182 @@
+// Index Page
+.index {
+  // Honors
+  .honors {
+    .card {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -3%;
+        width: 100px;
+        height: 123px;
+        background: url(../icons/honors.png) no-repeat center;
+        background-size: 100%;
+      }
+    }
+  }
+
+  // News
+  .news-carousel {
+    // Dots
+    .owl-dots {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      // Buttons
+      button {
+        &:focus {
+          outline: none;
+        }
+        & > span {
+          background: #b8b8b8;
+        }
+        &.active {
+          & > span {
+            background: #1f2c7f;
+          }
+        }
+      }
+    }
+  }
+
+  // Products
+  .products {
+    .p-item {
+      height: 200px;
+
+      &.product-1 > .p-content {
+        background: url(../img/index-products/product-1.png) no-repeat left top;
+        background-size: cover;
+      }
+
+      &.product-2 > .p-content {
+        background: url(../img/index-products/product-2.png) no-repeat bottom
+          right;
+        background-size: 100% 100%;
+      }
+
+      &.product-3 > .p-content {
+        background: url(../img/index-products/product-3.png) no-repeat top
+          center;
+        background-size: cover;
+      }
+
+      &.product-4 > .p-content {
+        background: url(../img/index-products/product-4.png) no-repeat top
+          center;
+        background-size: cover;
+      }
+
+      &.product-5 > .p-content {
+        background: url(../img/index-products/product-5.png) no-repeat bottom
+          center;
+        background-size: cover;
+      }
+    }
+  }
+
+  // Products Category and About Company
+  .pc-ac-main {
+    background: url(../img/index-about.png) no-repeat top center;
+    background-size: 100% auto;
+
+    // Products Category
+    .p-category {
+      .c-item {
+        transition: 0.3s;
+        height: 100px;
+        background: #747474;
+      }
+
+      .section-title {
+        background: url(../img/products-title-bg.png) no-repeat bottom center;
+        background-size: auto 100%;
+      }
+    }
+
+    // About Company
+    .about-company {
+      .title {
+        background: url(../img/about-title-bg.png) no-repeat bottom right;
+        background-size: auto 75%;
+      }
+    }
+  }
+
+  // Laboratory
+  .laboratory {
+    background: url(../img/laboratory-bg.png) no-repeat center;
+    background-size: 110% 100%;
+
+    // Header
+    & > header {
+      background: url(../img/laboratory-title-bg.png) no-repeat bottom center;
+      background-size: auto 100%;
+    }
+  }
+
+  // Soka
+  .soka {
+    .section-title {
+      background-size: auto 100%;
+    }
+
+    .social {
+      width: 310px;
+      height: 55px;
+      .s-link {
+        width: 150px;
+        height: 55px;
+        &.telegram {
+          background: url(../img/soka-telegram.png) no-repeat right bottom;
+          background-size: 100% 100%;
+        }
+
+        &.instagram {
+          background: url(../img/soka-instagram.png) no-repeat right bottom;
+          background-size: 100% 100%;
+        }
+      }
+    }
+  }
+
+  // Blog
+  .blog {
+    & > header {
+      .right {
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          height: 1px;
+          background: #f2f2f2;
+          z-index: -1;
+        }
+
+        .nav-link {
+          transition: 0.3s;
+          border: none;
+          line-height: 50px;
+          color: #757575;
+          font-size: 0.97em;
+          &.active {
+            color: $danger;
+            border-bottom: 1px solid $danger;
+          }
+        }
+      }
+
+      // More Posts Button
+      .more-posts {
+        height: 50px;
+        line-height: 50px;
+        color: #757575;
+        border-bottom: 1px solid #f2f2f2;
+      }
+    }
+  }
+}

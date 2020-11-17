@@ -1,0 +1,248 @@
+// Variables
+@import "../variables";
+
+// Mixins
+@import "../mixins";
+
+// Responsive Mode
+@import "ltrResponsive";
+
+// Desktop Mode
+@import "ltrDesktop";
+
+body.ltr {
+  // Fonts
+  .font- {
+    &r {
+      font-family: $r-r;
+    }
+
+    &b {
+      font-family: $r-b;
+    }
+  }
+
+  // Texts Align
+  .text- {
+    &right {
+      text-align: left !important;
+    }
+
+    &left {
+      text-align: right !important;
+    }
+  }
+
+  // Public
+  .b-card {
+    .more {
+      transform: rotate(180deg);
+    }
+  }
+
+  // General Header
+  .g-header {
+    // Items
+    .nav-item {
+      &::after {
+        left: 0;
+      }
+    }
+  }
+
+  // Global Overlay
+  .g-overlay {
+    right: -100vw;
+
+    &.active {
+      right: 0;
+    }
+  }
+
+  // Index
+  &.index {
+    // Honors
+    .honors {
+      .card {
+        &::after {
+          content: "";
+          right: -3%;
+          transform: rotateY(180deg);
+        }
+      }
+    }
+
+    // Products Category and About Company
+    .pc-ac-main {
+      .c-item {
+        img {
+          transform: scale(1.6) translateX(-4px);
+        }
+      }
+
+      // About Company
+      .about-company {
+        .title {
+          background: url(../img/about-title-bg.png) no-repeat bottom left;
+        }
+      }
+    }
+
+    // Soka
+    .soka {
+      .section-title {
+        background: url(../img/soka-title-bg.png) no-repeat bottom left;
+      }
+    }
+  }
+
+  // Catalogs
+  &.catalogs {
+    // Files
+    .files {
+      .f-item {
+        .title {
+          padding-left: 48px;
+          background: url(../icons/pdf-icon.png) no-repeat left center;
+        }
+      }
+    }
+  }
+
+  // Contact
+  &.contact {
+    .passage {
+      button.btn-success {
+        right: 25px;
+      }
+    }
+  }
+
+  .articles-footer {
+    .tags::before {
+      margin-right: 5px;
+    }
+  }
+
+  .passage {
+    .send-comment {
+      right: 10px;
+    }
+  }
+
+  // Jobs Card
+  .j-card {
+    .c-desc {
+      background: url(../img/jobs-desc-border-en.png) no-repeat left center;
+    }
+  }
+
+  &.news {
+    .control-btns {
+      right: 20px;
+      border-left: 1px solid #e9eff2;
+    }
+
+    .latest {
+      & > header {
+        transform: translateX(-15px);
+      }
+    }
+
+    .category {
+      .list-group-item {
+        padding-left: 15px;
+        background: url(../icons/news/right-arrow.png) no-repeat center left;
+      }
+    }
+
+    .search-box {
+      input {
+        padding-right: 40px;
+      }
+      .s-btn {
+        right: 5px;
+      }
+    }
+  }
+
+  i.icon-left-arrow {
+    transform: rotate(180deg);
+  }
+}
+
+// Texts on Small Screens
+@media (min-width: 576px) {
+  body.ltr {
+    .text-sm- {
+      &right {
+        text-align: left !important;
+      }
+
+      &left {
+        text-align: right !important;
+      }
+    }
+  }
+}
+
+// Texts on Medium Screens
+@media (min-width: 768px) {
+  body.ltr {
+    .text-md- {
+      &right {
+        text-align: left !important;
+      }
+
+      &left {
+        text-align: right !important;
+      }
+    }
+  }
+
+  .p-fetures {
+    background: url(../img/products/fetures-bg-en.png) no-repeat left center;
+    .f-item {
+      padding-left: 15px;
+      background: url(../img/products/tick.png) no-repeat left 7px;
+    }
+  }
+
+  .p-usage {
+    background: url(../img/products/usage-bg-en.png) no-repeat left center;
+    .f-item {
+      padding-left: 15px;
+      background: url(../img/products/close.png) no-repeat left 7px;
+    }
+  }
+}
+
+// Texts on Large Screens
+@media (min-width: 992px) {
+  body.ltr {
+    .text-lg- {
+      &right {
+        text-align: left !important;
+      }
+
+      &left {
+        text-align: right !important;
+      }
+    }
+  }
+}
+
+// Texts on Extra Large Screens
+@media (min-width: 1200px) {
+  body.ltr {
+    .text-xl- {
+      &right {
+        text-align: left !important;
+      }
+
+      &left {
+        text-align: right !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+// LTR Responsive Mode
+@media only screen and (max-width: 991.99px) {
+  body.ltr {
+    // Header
+    .g-header {
+      // Logo
+      .logo {
+        right: 10px;
+      }
+
+      // Menu
+      .menu-links {
+        border-radius: 0 20px 20px 0;
+        left: -70vw;
+
+        &.active {
+          left: 0;
+        }
+      }
+    }
+  }
+}

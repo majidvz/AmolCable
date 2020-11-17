@@ -1,0 +1,19 @@
+.g-intro {
+  width: 100vw;
+  height: 100vh;
+  background: url(../img/intro-bg.png) no-repeat top center;
+  background-size: 110% 100%;
+
+  .content {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      #00000020 50%,
+      transparent 100%
+    );
+  }
+
+  &.index-intro + .content-starter {
+    margin-top: -100px;
+  }
+}

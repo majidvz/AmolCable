@@ -1,0 +1,22 @@
+// RTL Responsive Mode
+@media only screen and (max-width: 991.99px) {
+  body.rtl {
+    // Header
+    .g-header {
+      // Logo
+      .logo {
+        left: 10px;
+      }
+
+      // Menu
+      .menu-links {
+        border-radius: 20px 0 0 20px;
+        right: -70vw;
+
+        &.active {
+          right: 0;
+        }
+      }
+    }
+  }
+}

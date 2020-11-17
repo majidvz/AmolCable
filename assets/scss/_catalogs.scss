@@ -1,0 +1,24 @@
+// Catalog
+.catalogs {
+  // Static Bar
+  .static-bar {
+    .title {
+      font-size: 0.98em;
+    }
+  }
+
+  // Files
+  .files {
+    .f-item {
+      border: 1px solid #d5d7e5;
+
+      .f-download {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 1.5em;
+        color: #d5d7e5;
+      }
+    }
+  }
+}

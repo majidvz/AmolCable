@@ -1,0 +1,29 @@
+// Employment
+.employment {
+  .fieldset {
+    height: 0;
+    overflow: hidden;
+    transition: 1s;
+    opacity: 0;
+    z-index: -500;
+    top: 0;
+    left: 100px;
+    &.active {
+      overflow: inherit;
+      height: auto;
+      opacity: 1;
+      left: 0;
+      z-index: 0;
+    }
+  }
+
+  .content.bg-inner-content {
+    span.btn.field-router {
+      width: 150px !important;
+    }
+
+    .btn.btn-success {
+      margin-left: 15px;
+    }
+  }
+}

@@ -1,0 +1,170 @@
+// Variables
+@import "../variables";
+
+// Mixins
+@import "../mixins";
+
+// Responsive Mode
+@import "rtlResponsive";
+
+// Desktop Mode
+@import "rtlDesktop";
+
+body.rtl {
+  // Fonts
+  .font- {
+    &r {
+      font-family: $s-r;
+    }
+
+    &b {
+      font-family: $s-b;
+    }
+  }
+
+  // General Header
+  .g-header {
+    // Items
+    .nav-item {
+      &::after {
+        right: 0;
+      }
+    }
+  }
+
+  // Global Overlay
+  .g-overlay {
+    left: -100vw;
+
+    &.active {
+      left: 0;
+    }
+  }
+
+  // Index
+  &.index {
+    // Honors
+    .honors {
+      .card {
+        &::after {
+          content: "";
+          left: -3%;
+        }
+      }
+    }
+
+    // Products Category and About Company
+    .pc-ac-main {
+      .c-item {
+        img {
+          transform: scale(1.6) translateX(4px);
+        }
+      }
+
+      // About Company
+      .about-company {
+        .title {
+          background: url(../img/about-title-bg.png) no-repeat bottom right;
+        }
+      }
+    }
+
+    // Soka
+    .soka {
+      .section-title {
+        background: url(../img/soka-title-bg.png) no-repeat bottom right;
+      }
+    }
+  }
+
+  // Breadcrumb Sign
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: "»" !important;
+  }
+
+  // Catalogs
+  &.catalogs {
+    // Files
+    .files {
+      .f-item {
+        .title {
+          padding-right: 48px;
+          background: url(../icons/pdf-icon.png) no-repeat right center;
+        }
+      }
+    }
+  }
+
+  // Contact
+  &.contact {
+    .passage {
+      button.btn-success {
+        left: 25px;
+      }
+    }
+  }
+
+  .articles-footer {
+    .tags::before {
+      margin-left: 5px;
+    }
+  }
+
+  .passage {
+    .send-comment {
+      left: 10px;
+    }
+  }
+
+  // Jobs Card
+  .j-card {
+    .c-desc {
+      background: url(../img/jobs-desc-border-fa.png) no-repeat right center;
+    }
+  }
+
+  .p-fetures {
+    background: url(../img/products/fetures-bg-fa.png) no-repeat right center;
+    .f-item {
+      padding-right: 15px;
+      background: url(../img/products/tick.png) no-repeat right 7px;
+    }
+  }
+
+  .p-usage {
+    background: url(../img/products/usage-bg-fa.png) no-repeat right center;
+    .f-item {
+      padding-right: 15px;
+      background: url(../img/products/close.png) no-repeat right 7px;
+    }
+  }
+
+  &.news {
+    .control-btns {
+      left: 20px;
+      border-right: 1px solid #e9eff2;
+    }
+
+    .latest {
+      & > header {
+        transform: translateX(15px);
+      }
+    }
+
+    .category {
+      .list-group-item {
+        padding-right: 15px;
+        background: url(../../icons/news/left-arrow.png) no-repeat center right;
+      }
+    }
+
+    .search-box {
+      input {
+        padding-left: 40px;
+      }
+      .s-btn {
+        left: 5px;
+      }
+    }
+  }
+}

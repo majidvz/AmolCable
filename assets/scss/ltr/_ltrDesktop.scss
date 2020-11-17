@@ -1,0 +1,39 @@
+@media only screen and (min-width: 992px) {
+  body.ltr {
+    // Index
+    &.index {
+      // Products
+      .products {
+        .p-item {
+          &.product-5 {
+            padding-left: 15px !important;
+          }
+        }
+      }
+    }
+
+    // About Page
+    &.about {
+      // Download Catalog
+      .dl- {
+        &text {
+          width: 75%;
+        }
+        &btn {
+          width: 25%;
+        }
+      }
+
+      // Slogan
+      .slogan::after {
+        right: 0;
+      }
+    }
+
+    &.news {
+      .side-bar {
+        padding-right: 0;
+      }
+    }
+  }
+}

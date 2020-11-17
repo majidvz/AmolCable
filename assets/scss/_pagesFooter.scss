@@ -1,0 +1,48 @@
+// Global Footer
+.g-footer {
+  background: $footer-bg;
+
+  .logo {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: skew(0, 5deg) translate(-50%, -20px);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 50px;
+    background-size: 100% 100%;
+  }
+
+  &:not(.index-footer)::after {
+    background: url(../img/other-footer-wave.svg) no-repeat center;
+  }
+
+  &.index-footer::after {
+    background: url(../img/index-footer-wave.svg) no-repeat center;
+  }
+
+  // Contacts
+  .contacts {
+    .icon {
+      font-size: 2em;
+    }
+  }
+
+  // Links
+  .links {
+    .links-item {
+      color: #6c6f77;
+      transition: 0.3s;
+    }
+  }
+
+  hr {
+    background: #212328;
+  }
+}

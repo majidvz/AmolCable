@@ -1,0 +1,49 @@
+// RTL Desktop Mode
+@media only screen and (min-width: 992px) {
+  body.rtl {
+    // Global Header
+    .g-header {
+      // Dropdown Menu
+      .dropdown-menu {
+        left: auto !important;
+        right: 0 !important;
+      }
+    }
+
+    // Index
+    &.index {
+      // Products
+      .products {
+        .p-item {
+          &.product-5 {
+            padding-right: 15px !important;
+          }
+        }
+      }
+    }
+
+    // About Page
+    &.about {
+      // Download Catalog
+      .dl- {
+        &text {
+          width: 85%;
+        }
+        &btn {
+          width: 15%;
+        }
+      }
+
+      // Slogan
+      .slogan::after {
+        left: 0;
+      }
+    }
+
+    &.news {
+      .side-bar {
+        padding-left: 0;
+      }
+    }
+  }
+}
